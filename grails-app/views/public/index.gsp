@@ -9,17 +9,10 @@
 		<meta name="robots" content="index, follow, noimageclick, noimageindex" />
 		<meta name="description" content="Online service to stamp pdf files" />
 		<meta name="keywords" content="pdf, watermark, stamp, free, online" />
-		<style type="text/css" media="screen">@import url("/assets/css/reset.css");</style>
-		<style type="text/css" media="screen">@import url("/assets/css/screen.css");</style>
-		<style type="text/css" media="print">@import url("/assets/css/print.css");</style>
-		<!--[if IE 6]>
-			<style type="text/css" media="screen">@import url("/assets/css/screen-ie6.css");</style>
-		<![endif]-->
-		<script type="text/javascript" src="/assets/javascript/jquery-1.2.6.min.js"></script>
-		<script type="text/javascript" src="/assets/javascript/jquery-ui-custom-1.6b.min.js"></script>
-		<script type="text/javascript" src="/assets/javascript/jquery.flyout.js"></script>
-		<script type="text/javascript" src="/assets/javascript/jquery.geturlparam.js"></script>
-		<script type="text/javascript">
+		<r:require module="stampyourpdf" />		
+		<r:layoutResources/>
+		
+		<r:script type="text/javascript">
 			$(document).ready(function () {
 				$.ui.accordion.animations.custom = function(options) {
 					this.slide(options, {
@@ -48,7 +41,7 @@
 				// This fixes hovering over section headers in ie6
 				$('a.section').hover(function() {$(this).addClass('hover');}, function() {$(this).removeClass('hover');});
 			});
-		</script>
+		</r:script>
 	</head>
 	<body>
 		<div id="container">
@@ -156,5 +149,6 @@
 				<!-- END EDIT -->
 			</div>
 		</div>
+		<r:layoutResources/>
 	</body>
 </html>
