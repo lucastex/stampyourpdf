@@ -27,4 +27,9 @@ grails.project.dependency.resolution = {
 	
         compile 'com.lowagie:itext:2.0.7'
     }
+
+	plugins {
+		
+		compile ':jquery:1.6.1.1'
+	}
 }
