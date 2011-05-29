@@ -10,7 +10,7 @@ class PublicController {
 		
 		def text = params.text
 		def file = request.getFile('file')
-		if (file && text) {
+		if (file.size > 0 && text) {
 			
 			def extension = file.extension
 			def newFilename = "stamped-${file.originalFilename.slug()}.${extension}"
@@ -18,6 +18,10 @@ class PublicController {
 			response.setContentType("application/pdf")
 			response.setHeader("Content-disposition", "attachment; filename=${newFilename}")
 			outputStream.writeTo(response.outputStream)
+		} else {
+			
+			flash.error = g.message(code: 'public.stamp.error.noparam')
+			redirect action: index
 		}
 	}
 }

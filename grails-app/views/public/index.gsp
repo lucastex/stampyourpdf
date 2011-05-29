@@ -10,6 +10,7 @@
 		<meta name="description" content="Online service to stamp pdf files" />
 		<meta name="keywords" content="pdf, watermark, stamp, free, online" />
 		<r:require module="stampyourpdf" />		
+		<link href='http://fonts.googleapis.com/css?family=Cabin:bold' rel='stylesheet' type='text/css' />
 		<r:layoutResources/>
 		
 		<r:script type="text/javascript">
@@ -40,6 +41,14 @@
 				
 				// This fixes hovering over section headers in ie6
 				$('a.section').hover(function() {$(this).addClass('hover');}, function() {$(this).removeClass('hover');});
+				
+				<g:if test="${flash.error}">
+				
+					alert('${flash.error}');
+				
+				</g:if>
+				
+				
 			});
 		</r:script>
 	</head>
@@ -108,8 +117,7 @@
 		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
+		  })();		
 		</script>
 	</body>
 </html>
