@@ -87,9 +87,10 @@
 				</div>
 				<div id="footer">
 					<!-- EDIT [Contact details] -->
-					<p><br />
-						Email: <a href="mailto:hey@stampyourpdf.com"><span>hey</span>@stampyourpdf.com</a><br />
-						Source code: http://github.com/lucastex/stampyourpdf
+					<p>
+						Email: <a href="#">lucastex [at] gmail com</a><br />
+						This site was developed using <a href="http://grails.org" target="_blank">Grails</a> and is fully opensource. <br />
+						You can check its source <a href="http://github.com/lucastex/stampyourpdf">here</a>.
 						
 					</p>
 					<!-- END EDIT -->
@@ -97,5 +98,19 @@
 			</div>
 		</g:uploadForm>
 		<r:layoutResources/>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-23656287-1']);
+		  _gaq.push(['_setDomainName', '.stampyourpdf.com']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
 	</body>
 </html>
