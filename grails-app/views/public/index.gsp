@@ -17,7 +17,7 @@
 				$.ui.accordion.animations.custom = function(options) {
 					this.slide(options, {
 						easing: options.down ? 'easeInOutCirc' : 'easeInOutCirc',
-						duration: options.down ? 1000 : 1000
+						duration: options.down ? 500 : 500
 					});
 				};
 				$('#content').accordion({
@@ -44,111 +44,57 @@
 		</r:script>
 	</head>
 	<body>
-		<div id="container">
-			<a accesskey="t" name="top"></a>
-			<p class="hidden skip"><a href="#cn">Skip to content</a></p>
-			<div id="header">
-				<!-- EDIT [Site root URL, Sitename (Put the span around something in your sitename that you want to be the contrasting colour, i.e. the first word, first letter etc.)] -->
-				<h1><a href="#"><span>Your</span> Sitename</a></h1>
-				<!-- END EDIT -->
-			</div>
-			<a accesskey="c" name="cn"></a>
-			<div id="contentContainer">
-				<div id="content">
-					<a class="section" name="welcome"><h3>Welcome</h3></a>
-					<div class="panel">
-						<p>Fusce arcu eros, bibendum vel, porttitor id, luctus eu, libero. <a href="#">Nam magna turpis</a>, consectetuer quis, rutrum id, porta id, sem. Nam quam. Donec in dui. Nullam tristique lacus pulvinar nunc. Integer bibendum tellus. Nullam et est in nibh aliquam posuere. Praesent nibh. In in sem nec nisl tristique placerat. <a href="#">Nulla ac dolor</a> sed ipsum accumsan pellentesque. Nulla facilisi. Phasellus adipiscing urna. Nulla nulla. Quisque mollis. Sed quam tortor, sollicitudin in, laoreet nec, ultricies vel, justo. Donec nec arcu.</p>
-						<p>Cras nec augue. Mauris dui lectus, bibendum sed, suscipit ac, lobortis ut, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eu arcu at velit volutpat aliquam. <a href="#">Proin congue arcu</a>. Suspendisse at eros. Aenean molestie consectetuer sapien. Quisque tortor velit, consectetuer ut, gravida quis, ornare non, libero. Sed facilisis purus sit amet dui. Fusce rutrum urna ac nisi sodales posuere.</p>
-					</div>
-					<a class="section" name="about"><h3 id="about">About</h3></a>
-					<div class="panel">
-						<p>Cras volutpat porta felis. Pellentesque tempus purus quis erat. Suspendisse in lectus. Ut ultrices nibh vitae tellus. <a href="#">Vivamus aliquam</a> lacus. Vestibulum ante ipsum primis in faucibus orci.</p>
-						<p>Example unordered list in general text:</p>
-						<ul>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-						</ul>
-						<p>Example ordered list in general text:</p>
-						<ol>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-						</ol>
-						<p>Example tabular data in general text:</p>
-						<table>
-							<thead>
-								<tr>
-									<td>Column 1</td>
-									<td>Column 2</td>
-									<td>Column 3</td>
-									<td>Column 4</td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>data</td>
-									<td>data</td>
-									<td>data</td>
-									<td>data</td>
-								</tr>
-								<tr>
-									<td>data</td>
-									<td>data</td>
-									<td>data</td>
-									<td>data</td>
-								</tr>
-								<tr>
-									<td>data</td>
-									<td>data</td>
-									<td>data</td>
-									<td>data</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<a class="section" name="services"><h3>Services</h3></a>
-					<div class="panel">
-						<p>Fusce arcu eros, bibendum vel, porttitor id, luctus eu, libero. <a href="#">Nam magna turpis</a>, consectetuer quis, rutrum id, porta id, sem. Nam quam. Donec in dui. Nullam tristique lacus pulvinar nunc. Integer bibendum tellus. Nullam et est in nibh aliquam posuere. Praesent nibh. In in sem nec nisl tristique placerat. <a href="#">Nulla ac dolor</a> sed ipsum accumsan pellentesque. Nulla facilisi. Phasellus adipiscing urna. Nulla nulla. Quisque mollis. Sed quam tortor, sollicitudin in, laoreet nec, ultricies vel, justo. Donec nec arcu.</p>
-						<p>Example services list:</p>
-						<ul>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-							<li><span>Item</span></li>
-						</ul>
-					</div>
-					<a class="section" name="portfolio"><h3>Portfolio</h3></a>
-					<div class="panel" id="portfolioPanel">
-						<p>Fusce arcu eros, bibendum vel, porttitor id, luctus eu, libero. <a href="#">Nam magna turpis</a>, consectetuer quis, rutrum id, porta id, sem. Nam quam. Donec in dui. Nullam tristique lacus pulvinar nunc. Integer bibendum.</p>
-						<p>Vertically with a description:</p>
-						<a class="thumb" title="Item 1" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 1" /></a>
-						<p>Fusce arcu eros, bibendum vel, porttitor id, luctus eu, libero. <a href="#">Nam magna turpis</a>, consectetuer quis, rutrum id, porta id, sem. Nam quam. Donec in dui. Nullam tristique lacus pulvinar nunc. Integer bibendum.</p>
-						<a class="thumb" title="Item 2" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 2" /></a>
-						<p>Fusce arcu eros, bibendum vel, porttitor id, luctus eu, libero. <a href="#">Nam magna turpis</a>, consectetuer quis, rutrum id, porta id, sem. Nam quam. Donec in dui. Nullam tristique lacus pulvinar nunc. Integer bibendum.</p>
-						<p>Or just in a grid with no text:</p>
-						<a class="thumb" title="Item 3" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 3" /></a>
-						<a class="thumb" title="Item 4" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 4" /></a>
-						<a class="thumb" title="Item 5" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 5" /></a>
-						<a class="thumb" title="Item 6" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 6" /></a>
-						<a class="thumb" title="Item 7" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 7" /></a>
-						<a class="thumb" title="Item 8" href="/assets/images/full.gif"><img src="/assets/images/thumb.gif" width="80px" height="80px" alt="Item 8" /></a>
-						<!-- NOTE [Use this element below a grid with no other elements below it, otherwise the panel won't expand the background around the grid. This is not the nicest or my preferred method but that can't be used as it destroys the accordion.] -->
-						<div class="clear"></div>
+		<g:uploadForm controller="public" action="stamp">
+			<div id="container">
+				<a accesskey="t" name="top"></a>
+				<p class="hidden skip"><a href="#cn">Skip to content</a></p>
+				<div id="header">
+					<h1><g:link controller="public" action="index">Stamp Your Pdf</g:link></h1>
+				</div>
+				<a accesskey="c" name="cn"></a>
+				<div id="contentContainer">
+					<div id="content">
+						<a class="section" name="welcome"><h3><g:message code="public.index.welcometab.title" /></h3></a>
+						<div class="panel">
+							<p><g:message code="public.index.welcometab.content.1" /></p>
+							<p><g:message code="public.index.welcometab.content.2" /></p>
+						</div>
+						<a class="section" name="about"><h3 id="about"><g:message code="public.index.pdftab.title" /></h3></a>
+						<div class="panel">
+							<p><g:message code="public.index.pdftab.content.1" /></p>
+							<p><input type="file" name="file" /></p>
+						</div>
+						<a class="section" name="services"><h3><g:message code="public.index.stamptab.title" /></h3></a>
+						<div class="panel">
+							<p>
+								<g:message code="public.index.stamptab.content.1.pre" />
+								<strong>[PN]</strong>
+								<g:message code="public.index.stamptab.content.1.middle" />
+								<strong>[PT]</strong> 
+								<g:message code="public.index.stamptab.content.1.pos" />
+							</p>
+							<p><g:message code="public.index.stamptab.content.2" /></p>
+							<p><g:message code="public.index.stamptab.content.3.label" />: <input type="text" name="text" size="45" maxlength="100" />
+						</div>
+						<a class="section" name="portfolio"><h3><g:message code="public.index.filetab.title" /></h3></a>
+						<div class="panel" id="portfolioPanel">
+							<p><g:message code="public.index.filetab.content.1" /></p>
+							<p>
+								<input type="submit" value="${message(code:'public.index.filetab.content.1.submit.label')}">
+							</p>
+						</div>
 					</div>
 				</div>
+				<div id="footer">
+					<!-- EDIT [Contact details] -->
+					<p>Tel: +44(0) 123 456 789<br />
+						Email: <a href="mailto:yourname@domain.com"><span>yourname</span>@domain.com</a><br />
+						ICQ: 78794356<br />
+						Twitter: username</p>
+					<!-- END EDIT -->
+				</div>
 			</div>
-			<div id="footer">
-				<!-- EDIT [Contact details] -->
-				<p>Tel: +44(0) 123 456 789<br />
-					Email: <a href="mailto:yourname@domain.com"><span>yourname</span>@domain.com</a><br />
-					ICQ: 78794356<br />
-					Twitter: username</p>
-				<!-- END EDIT -->
-			</div>
-		</div>
+		</g:uploadForm>
 		<r:layoutResources/>
 	</body>
 </html>

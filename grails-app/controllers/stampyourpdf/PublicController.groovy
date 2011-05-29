@@ -6,7 +6,7 @@ class PublicController {
 
     def index = { }
 
-	def upload = {
+	def stamp = {
 		
 		def text = params.text
 		def file = request.getFile('file')
