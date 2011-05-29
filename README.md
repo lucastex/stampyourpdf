@@ -35,4 +35,3 @@ curtir/share/twitter
 - analytics
 - email
 - twitter
-- mapeamento de erro
