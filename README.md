@@ -22,3 +22,17 @@ pagina no fim pelo free?
 api?
 login pelo fb
 curtir/share/twitter
+
+-- pendencias
+
+- arrumar rodape
+- validacoes
+	- se eh pdf
+	- se tem pdf
+	- se tem texto
+	
+- mensagens de erro
+- analytics
+- email
+- twitter
+- urlmappings com action default
