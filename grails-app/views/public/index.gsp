@@ -86,14 +86,12 @@
 					</div>
 				</div>
 				<div id="footer">
-					<!-- EDIT [Contact details] -->
 					<p>
 						Email: <a href="#">lucastex [at] gmail com</a><br />
 						This site was developed using <a href="http://grails.org" target="_blank">Grails</a> and is fully opensource. <br />
 						You can check its source <a href="http://github.com/lucastex/stampyourpdf">here</a>.
 						
 					</p>
-					<!-- END EDIT -->
 				</div>
 			</div>
 		</g:uploadForm>
