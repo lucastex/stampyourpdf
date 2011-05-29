@@ -68,9 +68,9 @@
 						<div class="panel">
 							<p>
 								<g:message code="public.index.stamptab.content.1.pre" />
-								<strong>[PN]</strong>
+								<strong>_PN_</strong>
 								<g:message code="public.index.stamptab.content.1.middle" />
-								<strong>[PT]</strong> 
+								<strong>_PT_</strong> 
 								<g:message code="public.index.stamptab.content.1.pos" />
 							</p>
 							<p><g:message code="public.index.stamptab.content.2" /></p>
@@ -87,10 +87,11 @@
 				</div>
 				<div id="footer">
 					<!-- EDIT [Contact details] -->
-					<p>Tel: +44(0) 123 456 789<br />
-						Email: <a href="mailto:yourname@domain.com"><span>yourname</span>@domain.com</a><br />
-						ICQ: 78794356<br />
-						Twitter: username</p>
+					<p><br />
+						Email: <a href="mailto:hey@stampyourpdf.com"><span>hey</span>@stampyourpdf.com</a><br />
+						Source code: http://github.com/lucastex/stampyourpdf
+						
+					</p>
 					<!-- END EDIT -->
 				</div>
 			</div>

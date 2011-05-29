@@ -15,7 +15,7 @@ class StampService {
     static transactional = false
 
     public OutputStream stamp(InputStream inputStream, String text) {
-
+		
 		def reader = new PdfReader(inputStream)
 		int totalPages  = reader.getNumberOfPages()
 
@@ -25,12 +25,12 @@ class StampService {
 		totalPages.times { idx ->
 
 			def pageNumber = idx + 1
-			def pageSize = reader.getPageSize(pageNumber) 
-
+			def pageSize = reader.getPageSize(pageNumber)
+			
+			def phraseToStamp = text.replaceAll("_PT_", "${totalPages}").replaceAll("_PN_", "${pageNumber}")
 			ColumnText.showTextAligned(stamp.getOverContent(pageNumber), 
 			                           Element.ALIGN_CENTER, 
-			                           //new Phrase("Page " + pageNumber + " of " + totalPages), 
-			                           new Phrase(text),
+			                           new Phrase(phraseToStamp),
 			                           (pageSize.width / 2) as float, 
 									   60,
 									   0)
