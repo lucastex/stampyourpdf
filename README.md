@@ -35,4 +35,4 @@ curtir/share/twitter
 - analytics
 - email
 - twitter
-- urlmappings com action default
+- mapeamento de erro
