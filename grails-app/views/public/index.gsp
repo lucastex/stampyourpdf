@@ -10,8 +10,21 @@
 		<meta name="description" content="Online service to stamp pdf files" />
 		<meta name="keywords" content="pdf, watermark, stamp, free, online" />
 		<r:require module="stampyourpdf" />		
-		<link href='http://fonts.googleapis.com/css?family=Cabin:bold' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css' />
 		<r:layoutResources/>
+		
+		<style>
+			#share-twitter {
+				left: 480px; 
+				top: 20px; 
+				position: absolute;
+			}
+			#share-fb {
+				left: 420px; 
+				top: 22px; 
+				position: absolute;
+			}
+		</style>
 		
 		<r:script type="text/javascript">
 			$(document).ready(function () {
@@ -95,13 +108,29 @@
 					</div>
 				</div>
 				<div id="footer">
-					<p>
-						Email: <a href="#">lucastex [at] gmail com</a><br />
-						This site was developed using <a href="http://grails.org" target="_blank">Grails</a> and is fully opensource. <br />
-						You can check its source <a href="http://github.com/lucastex/stampyourpdf">here</a>.<br />
+
+					<div id="share-twitter">
+						
+						<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="lucastex">Tweet</a>
+						<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+					
+					</div>
+					<div id="share-fb">
+					
+						<div id="fb-root"></div>
+						<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+						<fb:like href="www.stampyourpdf.com" send="false" layout="box_count" width="450" show_faces="true" font=""></fb:like>
+
+					</div>
+					
+					<p>	
+						This site was developed using <a href="http://grails.org" target="_blank">Grails</a><br />
+						and is fully opensource. You can check <br />
+						its source code <a href="http://github.com/lucastex/stampyourpdf">here</a>.<br />
 						<br />
-						Thank you for using it.
+						<a style="margin-left: 150px" href="http://twitter.com/lucastex">@lucastex</a>
 					</p>
+					
 				</div>
 			</div>
 		</g:uploadForm>
