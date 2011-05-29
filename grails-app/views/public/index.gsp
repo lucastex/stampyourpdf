@@ -89,8 +89,9 @@
 					<p>
 						Email: <a href="#">lucastex [at] gmail com</a><br />
 						This site was developed using <a href="http://grails.org" target="_blank">Grails</a> and is fully opensource. <br />
-						You can check its source <a href="http://github.com/lucastex/stampyourpdf">here</a>.
-						
+						You can check its source <a href="http://github.com/lucastex/stampyourpdf">here</a>.<br />
+						<br />
+						Thank you for using it.
 					</p>
 				</div>
 			</div>
