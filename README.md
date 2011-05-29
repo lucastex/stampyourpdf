@@ -11,5 +11,4 @@ Useful when you have to send some PDF to someone and wants to track it.
 
 ## Contact
 
-Lucas Teixeira
-@lucastex
+Lucas Teixeira - @lucastex
