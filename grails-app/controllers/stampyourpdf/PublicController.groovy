@@ -11,11 +11,12 @@ class PublicController {
 		def file = request.getFile('file')
 		if (file) {
 			
-			def newFilename = "stamped-${file.originalFilename}"
+			def extension = file.extension
+			def newFilename = "stamped-${file.originalFilename.slug()}.${extension}"
 			def outputStream = stampService.stamp(file.inputStream, params.text)
 			response.setContentType("application/pdf")
 			response.setHeader("Content-disposition", "attachment; filename=${newFilename}")
-			response.outputStream << outputStream
+			outputStream.writeTo(response.outputStream)
 		}
 	}
 }

@@ -14,13 +14,12 @@ class StampService {
 
     static transactional = false
 
-    public OutputStream stamp(FileInputStream inputStream, String text) {
+    public OutputStream stamp(InputStream inputStream, String text) {
 
 		def reader = new PdfReader(inputStream)
 		int totalPages  = reader.getNumberOfPages()
 
-		//def outputStream = new ByteArrayOutputStream()
-		def outputStream = new FileOutputStream("/tmp/xpto.pdf")
+		def outputStream = new ByteArrayOutputStream()
 		def stamp = new PdfStamper(reader, outputStream)
 
 		totalPages.times { idx ->
