@@ -31,5 +31,9 @@ grails.project.dependency.resolution = {
 	plugins {
 		
 		compile ':jquery:1.6.1.1'
+		compile ':resources:1.0'
+		compile ':zipped-resources:1.0'
+		compile ':cached-resources:1.0'
+		compile ':cache-headers:1.1.5'
 	}
 }
