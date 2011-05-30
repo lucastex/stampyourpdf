@@ -9,6 +9,12 @@
 		<meta name="robots" content="index, follow, noimageclick, noimageindex" />
 		<meta name="description" content="Online service to stamp pdf files" />
 		<meta name="keywords" content="pdf, watermark, stamp, free, online" />
+		<meta property="og:title" content="Stamp your PDF!"/> 
+		<meta property="og:type" content="website"/> 
+		<meta property="og:image" content="http://www.stampyourpdf.com/logo.png" /> 
+		<meta property="og:url" content="http://www.stampyourpdf.com" /> 
+		<meta property="og:site_name" content="Stamp your PDF!" /> 
+		<meta property="fb:admins" content="1254872435" /> 
 		<r:require module="stampyourpdf" />		
 		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css' />
 		<r:layoutResources/>
