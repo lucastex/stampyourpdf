@@ -13,11 +13,23 @@ class PublicController {
 		if (file.size > 0 && text) {
 			
 			def extension = file.extension
-			def newFilename = "stamped-${file.originalFilename.slug()}.${extension}"
-			def outputStream = stampService.stamp(file.inputStream, text)
-			response.setContentType("application/pdf")
-			response.setHeader("Content-disposition", "attachment; filename=${newFilename}")
-			outputStream.writeTo(response.outputStream)
+			if (extension.equalsIgnoreCase("pdf")) {
+				try {
+					def newFilename = "stamped-${file.originalFilename.slug()}.${extension}"
+					def outputStream = stampService.stamp(file.inputStream, text)
+					response.setContentType("application/pdf")
+					response.setHeader("Content-disposition", "attachment; filename=${newFilename}")
+					outputStream.writeTo(response.outputStream)
+				} catch (Exception ex) {
+					def errorMessage = "${g.message(code: 'public.stamp.error.generic')}: ${ex.message}"
+					flash.error = errorMessage
+					redirect action: index
+				}
+			} else {
+				flash.error = g.message(code: 'public.stamp.error.nopdf')
+				redirect action: index
+			}
+			
 		} else {
 			
 			flash.error = g.message(code: 'public.stamp.error.noparam')
