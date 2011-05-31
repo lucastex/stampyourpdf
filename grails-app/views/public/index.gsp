@@ -33,6 +33,17 @@
 		</style>
 		
 		<r:script type="text/javascript">
+		
+			function trackEvent(event) {				
+				var pageTracker = _gat._getTracker("UA-23656287-1");
+				pageTracker._trackEvent('PDF', event);
+			}
+			
+			function trackError(code, msg) {				
+				var pageTracker = _gat._getTracker("UA-23656287-1");
+				pageTracker._trackEvent('error', code, msg);
+			}
+			
 			$(document).ready(function () {
 				$.ui.accordion.animations.custom = function(options) {
 					this.slide(options, {
@@ -64,6 +75,10 @@
 				<g:if test="${flash.error}">
 				
 					alert('${flash.error}');
+					
+					<g:if test="${flash.errorCode}">
+						trackError('${flash.errorCode}', '${flash.error}');
+					</g:if>
 				
 				</g:if>
 				
@@ -72,7 +87,8 @@
 		</r:script>
 	</head>
 	<body>
-		<g:uploadForm controller="public" action="stamp">
+		<g:uploadForm controller="public" action="stamp" onsubmit="trackEvent('create');">
+		
 			<div id="container">
 				<a accesskey="t" name="top"></a>
 				<p class="hidden skip"><a href="#cn">Skip to content</a></p>

@@ -23,16 +23,18 @@ class PublicController {
 				} catch (Exception ex) {
 					def errorMessage = "${g.message(code: 'public.stamp.error.generic')}: ${ex.message}"
 					flash.error = errorMessage
+					flash.errorCode = 'generic'
 					redirect action: index
 				}
 			} else {
 				flash.error = g.message(code: 'public.stamp.error.nopdf')
+				flash.errorCode = 'notpdf'
 				redirect action: index
 			}
 			
 		} else {
-			
 			flash.error = g.message(code: 'public.stamp.error.noparam')
+			flash.errorCode = 'withoutparam'
 			redirect action: index
 		}
 	}
