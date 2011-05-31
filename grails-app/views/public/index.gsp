@@ -24,6 +24,7 @@
 				left: 480px; 
 				top: 20px; 
 				position: absolute;
+				z-index: 99999;
 			}
 			#share-fb {
 				left: 420px; 
@@ -133,7 +134,7 @@
 
 					<div id="share-twitter">
 						
-						<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="lucastex">Tweet</a>
+						<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.stampyourpdf.com" data-count="vertical" data-via="lucastex">Tweet</a>
 						<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 					
 					</div>
